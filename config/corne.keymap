@@ -15,7 +15,7 @@
             label = "new_macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LCTRL &kp LEFT_GUI &kp LEFT>,
+                <&sk LCTRL &sk LEFT_GUI &kp LEFT>,
                 <&macro_tap>;
         };
         VirtualDesktopRight: VirtualDesktopRight {
@@ -24,7 +24,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LCTRL &kp LEFT_GUI &kp RIGHT>;
+                <&sk LCTRL &sk LEFT_GUI &kp RIGHT>;
         };
     };
 
