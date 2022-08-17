@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-   &kp TAB  &kp DOUBLE_QUOTES          &trans         &kp EQUAL             &kp PRCNT     &trans         &kp AMPS                 &trans             &trans         &kp PIPE  &kp KP_MULTIPLY         &kp BSPC
- &kp LCTRL        &kp AT_SIGN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS     &trans           &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE           &trans           &trans
- &kp LSHFT             &trans          &trans            &trans                &trans   &kp BSLH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS           &trans  &kp RIGHT_SHIFT
-                                                         &trans                &trans  &kp ENTER        &kp SPACE                 &trans             &trans
+   &kp TAB        &kp AT_SIGN          &trans         &kp EQUAL             &kp PRCNT                &trans         &kp AMPS                 &trans             &trans        &kp PIPE2  &kp KP_MULTIPLY         &kp BSPC
+ &kp LCTRL  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans           &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE           &trans           &trans
+ &kp LSHFT             &trans          &trans            &trans                &trans  &kp NON_US_BACKSLASH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS           &trans  &kp RIGHT_SHIFT
+                                                         &trans                &trans             &kp ENTER        &kp SPACE                 &trans             &trans
             >;
         };
     };
