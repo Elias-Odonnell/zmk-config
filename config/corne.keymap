@@ -38,9 +38,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &trans  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5     &kp N6    &kp N7  &kp N8     &kp N9  &kp N0         &trans
- &kp TAB  &trans  &trans  &trans  &trans     &trans   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &kp RIGHT_ALT
-  &trans  &trans  &trans  &trans  &trans    &kp F13    &kp F14    &trans  &trans     &trans  &trans         &trans
+  &trans  &kp N1  &kp N2  &kp N3  &kp N4     &kp N5     &kp N6    &kp N7  &kp N8     &kp N9  &kp N0        &trans
+ &kp TAB  &trans  &trans  &trans  &trans     &trans   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &kp LEFT_ALT
+  &trans  &trans  &trans  &trans  &trans    &kp F13    &kp F14    &trans  &trans     &trans  &trans        &trans
                           &trans   &mo 3  &kp ENTER  &kp SPACE     &mo 3  &trans
             >;
         };
@@ -53,10 +53,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &trans        &kp AT_SIGN          &trans         &kp EQUAL             &kp PRCNT                &trans         &kp AMPS                 &trans             &trans        &kp PIPE2  &kp ASTERISK  &trans
- &trans  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans           &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &trans
- &trans             &trans          &trans            &trans                &trans  &kp NON_US_BACKSLASH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS        &trans  &trans
-                                                       &mo 3                &trans             &kp ENTER        &kp SPACE                 &trans              &mo 3
+  &trans        &kp AT_SIGN          &trans         &kp EQUAL             &kp PRCNT                &trans         &kp AMPS                 &trans             &trans        &kp PIPE2  &kp ASTERISK        &trans
+ &kp TAB  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans           &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &kp LEFT_ALT
+  &trans             &trans          &trans            &trans                &trans  &kp NON_US_BACKSLASH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS        &trans        &trans
+                                                        &mo 3                &trans             &kp ENTER        &kp SPACE                 &trans              &mo 3
             >;
         };
 
