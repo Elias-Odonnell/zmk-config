@@ -54,7 +54,7 @@
 
             bindings = <
   &trans        &kp AT_SIGN          &trans         &kp EQUAL             &kp PRCNT                &trans         &kp AMPS         &kp UNDERSCORE             &trans        &kp PIPE2  &kp ASTERISK        &trans
- &kp TAB  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans           &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &kp LEFT_ALT
+ &kp TAB  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans         &kp HASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE        &trans  &kp LEFT_ALT
   &trans             &trans          &trans            &trans                &trans  &kp NON_US_BACKSLASH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS        &trans        &trans
                                                         &mo 3                &trans             &kp ENTER        &kp SPACE                 &trans              &mo 3
             >;
