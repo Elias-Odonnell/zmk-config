@@ -14,10 +14,19 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings =
                 <&kp ASTERISK>,
                 <&pointer>;
+        };
+        td1: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings =
+                <&kp SPACE>,
+                <&space>;
         };
     };
 
@@ -27,6 +36,12 @@
             label = "pointer";
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GREATER_THAN>;
+        };
+        space: space {
+            compatible = "zmk,behavior-macro";
+            label = "space";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp SEMI>;
         };
     };
 
@@ -74,7 +89,7 @@
   &trans        &kp AT_SIGN          &trans         &kp EQUAL             &kp PRCNT                &trans         &kp AMPS         &kp UNDERSCORE             &trans        &kp PIPE2    &td0        &trans
  &kp TAB  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans  &kp NON_US_HASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &kp LEFT_ALT
   &trans             &trans          &trans            &trans                &trans  &kp NON_US_BACKSLASH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS  &trans        &trans
-                                                        &mo 3             &kp ENTER                &trans           &trans              &kp SPACE              &mo 3
+                                                        &mo 3             &kp ENTER                &trans           &trans                   &td0              &mo 3
             >;
         };
 
