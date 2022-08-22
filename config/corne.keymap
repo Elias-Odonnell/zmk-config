@@ -9,6 +9,14 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        POINTER(pointer,
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+        )
+    };
+    
     behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -17,16 +25,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp ASTERISK>, <&pointer>;
         };
-    };
-        
-    macros {
-         pointer: pointer {
-            label = "pointer";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp MINUS &kp ASTERISK>
-                ;
     };
 
     keymap {
