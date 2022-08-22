@@ -64,7 +64,7 @@
                 <&kp LEFT_CONTROL &kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp LEFT>,
-                <&macro_press>,
+                <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
     };
