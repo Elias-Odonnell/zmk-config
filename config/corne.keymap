@@ -17,7 +17,7 @@
             tapping-term-ms = <200>;
             bindings =
                 <&kp ASTERISK>,
-                <&kp MINUS &kp GREATER_THAN>;
+                <&pointer>;
         };
     };
 
@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-macro";
             label = "pointer";
             #binding-cells = <0>;
-            bindings = <>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
         };
     };
 
