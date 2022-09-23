@@ -122,7 +122,7 @@
 
         lhalt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <13 15>;
+            key-positions = <14 16>;
         };
 
         rhalt {
@@ -132,7 +132,7 @@
 
         lhshift {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <13 14>;
+            key-positions = <14 15>;
         };
 
         rhshift {
