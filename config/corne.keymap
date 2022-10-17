@@ -155,7 +155,7 @@
             key-positions = <>;
         };
 
-        new_combo {
+        rhctrl_shift {
             bindings = <&kp LCTRL>;
             key-positions = <>;
         };
