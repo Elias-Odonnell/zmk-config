@@ -151,12 +151,12 @@
         };
 
         lhctrl_shift {
-            bindings = <&kp LCTRL>;
+            bindings = <&kp LCTRL + LSHIFT>;
             key-positions = <>;
         };
 
         rhctrl_shift {
-            bindings = <&kp LCTRL>;
+            bindings = <&kp LCTRL + LSHIFT>;
             key-positions = <>;
         };
     };
