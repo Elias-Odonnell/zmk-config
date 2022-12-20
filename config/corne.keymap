@@ -111,7 +111,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LGUI>,
+                <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp T>,
                 <&macro_tap>,
