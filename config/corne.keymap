@@ -110,10 +110,10 @@
             label = "new_macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap_time 10>,
+                <&macro_tap_time 30>,
                 <&kp LEFT_GUI &kp T &kp W &kp KP_ENTER>,
                 <&macro_wait_time 500>,
-                <&macro_tap_time 10>,
+                <&macro_tap_time 30>,
                 <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp KP_ENTER &kp LA(F4)>;
         };
     };
