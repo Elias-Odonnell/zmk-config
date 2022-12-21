@@ -105,20 +105,6 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
-        LaptopLid: LaptopLid {
-            compatible = "zmk,behavior-macro";
-            label = "LaptopLid";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>, 
-                <&kp T>,
-                <&macro_tap>, 
-                <&kp W>,
-                <&macro_tap>,
-                <&kp ENTER>,
-        };
     };
 
     combos {
