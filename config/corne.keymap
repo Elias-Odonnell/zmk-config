@@ -75,9 +75,9 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GREATER_THAN>;
         };
-        space-semicolon: space-semicolon {
+        spacesemicolon: spacesemicolon {
             compatible = "zmk,behavior-macro";
-            label = "space-semicolon";
+            label = "spacesemicolon";
             #binding-cells = <0>;
             bindings = <&kp END &kp SEMI>;
         };
