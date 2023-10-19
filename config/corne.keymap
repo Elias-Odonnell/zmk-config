@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -15,20 +15,15 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =
-                <&kp ASTERISK>,
-                <&pointer>;
+            bindings = <&kp ASTERISK>, <&pointer>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings =
-                <&kp SPACE>,
-                <&kp END>;
+            bindings = <&kp SPACE>, <&kp END>;
         };
-        
         lh_pht: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_POSITIONAL_HOLD_TAP";
@@ -36,9 +31,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 23 30 31 32 33 34>;
         };
@@ -49,9 +42,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <100>;// <---[[produces tap if held longer than tapping-term-ms]]
             quick-tap-ms = <200>;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <1 2 3 4 5 12 13 14 15 16 17 25 26 27 28 29>;
         };
@@ -63,9 +54,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -88,11 +77,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&kp LEFT_CONTROL &kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT>;
+                <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
         VDLeft: VDLeft {
             compatible = "zmk,behavior-macro";
@@ -100,22 +89,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT>,
+                <&kp LEFT_CONTROL &kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp LEFT>,
                 <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT>;
-        };
-        LaptopLid: LaptopLid {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap_time 50>,
-                <&kp LEFT_GUI &kp T &kp W &kp ENTER>,
-                <&macro_wait_time 1000>,
-                <&macro_tap_time 50>,
-                <&kp LS(TAB) &kp LS(TAB) &kp LS(TAB) &kp KP_ENTER &kp LA(F4)>;
+                <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
     };
 
@@ -184,10 +162,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-    &kp ESC   &kp Q   &kp W   &kp E      &kp R   &kp T   &kp Y      &kp U      &kp I    &kp O     &kp P    &kp BSPC
-    &kp TAB   &kp A   &kp S   &kp D      &kp F   &kp G   &kp H      &kp J      &kp K    &kp L  &kp SEMI     &kp SQT
- &caps_word   &kp Z   &kp X   &kp C      &kp V   &kp B   &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &caps_word
-                              &mo 1  &kp ENTER   &mo 2   &mo 2  &kp SPACE      &mo 1
+&kp ESC     &kp Q  &kp W  &kp E  &kp R      &kp T  &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D  &kp F      &kp G  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&caps_word  &kp Z  &kp X  &kp C  &kp V      &kp B  &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &caps_word
+                          &mo 1  &kp ENTER  &mo 2  &mo 2  &kp SPACE  &mo 1
             >;
         };
 
@@ -199,10 +177,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &trans  &kp N1  &kp N2      &kp N3     &kp N4   &kp N5    &kp N6     &kp N7  &kp N8     &kp N9  &kp N0  &trans
- &kp TAB  &trans  &trans  &kp DELETE     &trans   &trans  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-  &trans  &trans  &trans      &trans     &trans  &VDLeft  &VDRight     &trans  &trans     &trans  &trans  &trans
-                              &trans  &kp ENTER    &mo 3     &mo 3  &kp SPACE  &trans
+&trans   &kp N1  &kp N2  &kp N3      &kp N4     &kp N5   &kp N6    &kp N7     &kp N8  &kp N9     &kp N0  &trans
+&kp TAB  &trans  &trans  &kp DELETE  &trans     &trans   &kp LEFT  &kp DOWN   &kp UP  &kp RIGHT  &trans  &trans
+&trans   &trans  &trans  &trans      &trans     &VDLeft  &VDRight  &trans     &trans  &trans     &trans  &trans
+                         &trans      &kp ENTER  &mo 3    &mo 3     &kp SPACE  &trans
             >;
         };
 
@@ -214,19 +192,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-  &trans        &kp AT_SIGN          &trans         &kp EQUAL             &kp PRCNT                &trans         &kp AMPS         &kp UNDERSCORE             &trans        &kp PIPE2    &td0        &trans
- &kp TAB  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS                &trans  &kp NON_US_HASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &kp LEFT_ALT
-  &trans             &trans          &trans            &trans                &trans  &kp NON_US_BACKSLASH  &kp EXCLAMATION              &kp MINUS          &kp MINUS         &kp PLUS  &trans        &trans
-                                                        &mo 3             &kp ENTER                &trans           &trans                   &td1              &mo 3
+&trans   &kp AT_SIGN        &trans          &kp EQUAL         &kp PRCNT             &trans                &kp AMPS         &kp UNDERSCORE         &trans             &kp PIPE2        &td0    &trans
+&kp TAB  &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans                &kp NON_US_HASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &kp LEFT_ALT
+&trans   &trans             &trans          &trans            &trans                &kp NON_US_BACKSLASH  &kp EXCLAMATION  &kp MINUS              &kp MINUS          &kp PLUS         &trans  &trans
+                                            &mo 3             &kp ENTER             &trans                &trans           &td1                   &mo 3
             >;
         };
 
         Bluetooth {
             bindings = <
-     &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans      &trans
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans      &trans
-     &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans      &trans
-                                               &trans        &trans        &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans        &trans        &trans        &trans  &trans  &trans
             >;
         };
     };
