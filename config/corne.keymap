@@ -25,6 +25,7 @@
                 <&macro_release>,
                 <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
+
         VDLeft: VDLeft {
             compatible = "zmk,behavior-macro";
             label = "VDLeft";
@@ -90,6 +91,16 @@
         rhctrl_shift {
             bindings = <&kp LC(LEFT_SHIFT)>;
             key-positions = <21 20 19>;
+        };
+
+        F14Left {
+            bindings = <&kp F14>;
+            key-positions = <1 2 3 4>;
+        };
+
+        F14Right {
+            bindings = <&kp F14>;
+            key-positions = <7 8 9 10>;
         };
     };
 
