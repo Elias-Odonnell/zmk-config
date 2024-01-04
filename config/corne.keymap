@@ -102,6 +102,16 @@
             bindings = <&kp F14>;
             key-positions = <7 8 9 10>;
         };
+
+        F13right {
+            bindings = <&kp F13>;
+            key-positions = <34 33 32 31>;
+        };
+
+        F13left {
+            bindings = <&kp F13>;
+            key-positions = <25 26 27 28>;
+        };
     };
 
     keymap {
@@ -158,6 +168,15 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
