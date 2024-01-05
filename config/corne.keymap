@@ -41,9 +41,14 @@
 
         StringTest: StringTest {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp D &kp SPACE &kp EQUAL &kp SPACE &kp LBRC &kp SQT &kp C &kp O &kp L &kp N1 &kp SQT &kp COLON &kp LBKT &kp N1 &kp COMMA &kp N2 &kp RBKT &kp COMMA &kp SPACE &kp SQT &kp C &kp O &kp L &kp N2 &kp SQT &kp COLON &kp LBKT &kp N3 &kp COMMA &kp N4 &kp RBKT &kp RBRC &kp KP_ENTER &kp D &kp F &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp LS(D) &kp A &kp T &kp A &kp LS(F) &kp R &kp A &kp M &kp E &kp LPAR &kp D &kp A &kp T &kp A &kp EQUAL &kp D &kp RPAR>;
             label = "STRINGTEST";
+            #binding-cells = <0>;
+            bindings = 
+                <&kp D &kp SPACE &kp EQUAL &kp SPACE &kp LBRC &kp SQT &kp C &kp O &kp L &kp N1 &kp SQT &kp COLON &kp LBKT &kp N1 &kp COMMA &kp N2 &kp RBKT &kp COMMA &kp SPACE &kp SQT &kp C &kp O &kp L &kp N2 &kp SQT &kp COLON &kp LBKT &kp N3 &kp COMMA &kp N4 &kp RBKT &kp RBRC>, 
+                <&macro_tap>,
+                <&kp KP_ENTER>, 
+                <&kp D &kp F &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp LS(D) &kp A &kp T &kp A &kp LS(F) &kp R &kp A &kp M &kp E &kp LPAR &kp D &kp A &kp T &kp A &kp EQUAL &kp D &kp RPAR>;
+            
         };
     };
 
