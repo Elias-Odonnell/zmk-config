@@ -36,11 +36,13 @@
                 <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
 
-        splitData: importsML {
+        splitData: splitData {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp F &kp R &kp O &kp M &kp SPACE &kp S &kp K &kp L &kp E &kp A &kp R &kp N &kp DOT &kp M &kp O &kp D &kp E &kp L &kp UNDER &kp S &kp E &kp L &kp E &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T &kp RET &kp C &kp O &kp L &kp U &kp M &kp N &kp S &kp SPACE &kp EQUAL &kp SPACE &kp LBKT &kp LBRC &kp RET &kp A &kp L &kp L &kp UNDER &kp LS(X) &kp SPACE &kp EQUAL &kp SPACE &kp D &kp F &kp LBKT &kp C &kp O &kp L &kp U &kp M &kp N &kp S &kp LBRC &kp RET &kp A &kp L &kp L &kp UNDER &kp Y &kp SPACE &kp EQUAL &kp SPACE &kp D &kp F &kp LBKT &kp SQT &kp P &kp R &kp E &kp D &kp I &kp C &kp T &kp I &kp O &kp N &kp SQT &kp LBRC &kp RET &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp LS(X) &kp COMMA &kp SPACE &kp T &kp E &kp S &kp T &kp UNDER &kp LS(X) &kp COMMA &kp SPACE &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp Y &kp COMMA &kp SPACE &kp T &kp E &kp S &kp T &kp UNDER &kp Y &kp SPACE &kp EQUAL &kp SPACE &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T &kp LPAR &kp A &kp L &kp L &kp UNDER &kp LS(X) &kp COMMA &kp SPACE &kp A &kp L &kp L &kp UNDER &kp Y &kp COMMA &kp SPACE &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp I &kp Z &kp E &kp EQUAL &kp N0 &kp DOT &kp N2 &kp COMMA &kp R &kp A &kp N &kp D &kp O &kp M &kp UNDER &kp S &kp T &kp A &kp T &kp E &kp EQUAL &kp N0 &kp RPAR>;
-            label = "IMPORTSML";
+            label = "splitData";
+            wait-ms = <30>;
+            tap-ms = <40>;
         };
     };
 
@@ -97,29 +99,9 @@
             key-positions = <21 20 19>;
         };
 
-        F14Left {
-            bindings = <&kp F14>;
-            key-positions = <1 2 3 4>;
-        };
-
-        F14Right {
-            bindings = <&kp F14>;
-            key-positions = <7 8 9 10>;
-        };
-
-        F13right {
-            bindings = <&kp F13>;
-            key-positions = <34 33 32 31>;
-        };
-
-        F13left {
-            bindings = <&kp F13>;
-            key-positions = <25 26 27 28>;
-        };
-
-        splitData {
-            bindings = <&splitData>;
-            key-positions = <34 33 32 31 13>;
+        to4right {
+            bindings = <&mo 4>;
+            key-positions = <10 9 8 7>;
         };
     };
 
@@ -177,6 +159,15 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans        &trans        &trans        &trans  &trans  &trans
+            >;
+        };
+
+        macros {
+            bindings = <
+&trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &splitData  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
