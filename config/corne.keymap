@@ -39,8 +39,6 @@
         import: import {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
             bindings = <&kp SPACE &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>;
             label = "IMPORT";
         };
@@ -48,18 +46,17 @@
         fromSKLearn: fromSKLearn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&kp F &kp R &kp O &kp M &kp SPACE &kp S &kp K &kp L &kp E &kp A &kp R &kp N &kp DOT>;
+            bindings =
+                <&kp F &kp R &kp O &kp M &kp SPACE &kp S &kp K &kp L &kp E &kp A &kp R &kp N &kp DOT>,
+                <&macro_press>;
+
             label = "FROMSKLEARN";
         };
 
         test: test {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings = <&fromSKLearn &kp M &kp O &kp D &kp E &kp L &kp UNDER &kp S &kp E &kp L &kp E &kp C &kp T &kp I &kp O &kp N &import &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T>;
+            bindings = <&fromSKLearn &import &kp M &kp O &kp D &kp E &kp L &kp UNDER &kp S &kp E &kp L &kp E &kp C &kp T &kp I &kp O &kp N &import &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T &import>;
             label = "TEST";
         };
     };
