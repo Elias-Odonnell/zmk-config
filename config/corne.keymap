@@ -41,7 +41,8 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <40>;
-            bindings = <&kp SPACE &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>;
+            bindings = 
+                <&kp SPACE &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>;
             label = "IMPORT";
         };
 
@@ -60,7 +61,10 @@
             #binding-cells = <0>;
             wait-ms = <30>;
             tap-ms = <40>;
-            bindings = <&fromSKLearn &import &kp M &kp O &kp D &kp E &kp L &kp UNDER &kp S &kp E &kp L &kp E &kp C &kp T &kp I &kp O &kp N &import &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T &import>;
+            bindings = 
+                <&fromSKLearn &kp M &kp O &kp D &kp E &kp L &kp UNDER &kp S &kp E &kp L &kp E &kp C &kp T &kp I &kp O &kp N>,
+                <&import>,
+                <&kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T>;
             label = "TEST";
         };
     };
