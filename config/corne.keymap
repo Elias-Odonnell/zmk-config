@@ -36,10 +36,24 @@
                 <&kp LEFT_CONTROL &kp LEFT_GUI>;
         };
 
+        import: import {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp SPACE &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>;
+            label = "IMPORT";
+        };
+
+        fromSKLearn: fromSKLearn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp F &kp R &kp O &kp M &kp SPACE &kp S &kp K &kp L &kp E &kp A &kp R &kp N &kp DOT>;
+            label = "FROMSKLEARN";
+        };
+
         test: test {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I &kp J &kp K &kp L &kp M &kp N &kp O &kp P &kp Q &kp R &kp S &kp T &kp U &kp V &kp W &kp X &kp Y &kp Y &kp Z>;
+            bindings = <&fromSKLearn &kp M &kp O &kp D &kp E &kp L &kp UNDER &kp S &kp E &kp L &kp E &kp C &kp T &kp I &kp O &kp N &import &kp T &kp R &kp A &kp I &kp N &kp UNDER &kp T &kp E &kp S &kp T &kp UNDER &kp S &kp P &kp L &kp I &kp T>;
             label = "TEST";
         };
     };
