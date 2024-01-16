@@ -42,7 +42,7 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = 
-                <&kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>,
+                <&kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE>;
             label = "IMPORT";
         };
 
