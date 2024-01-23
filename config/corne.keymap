@@ -133,7 +133,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_READ_CSV";
             #binding-cells = <0>;
-            bindings = <&tap_read_csv>, <&read_csv_extended>;
+            bindings = <&read_csv>, <&read_csv_extended>;
         };
     };
 
