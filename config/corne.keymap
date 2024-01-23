@@ -54,7 +54,7 @@
             tap-ms = <40>;
         };
 
-         read_csv_extended: read_csv_extended {
+        read_csv_extended: read_csv_extended {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp P &kp D &kp DOT &kp R &kp E &kp A &kp D &kp UNDER &kp C &kp S &kp V &kp LPAR &kp AT &kp AT &kp COMMA &kp SPACE &kp U &kp S &kp E &kp C &kp O &kp L &kp S &kp EQUAL &kp LBKT &kp AT &kp C &kp O &kp L &kp N &kp A &kp M &kp E &kp AT &kp COMMA &kp AT &kp C &kp O &kp L &kp N2 &kp N &kp A &kp M &kp E &kp AT &kp RBKT &kp COMMA &kp I &kp N &kp D &kp E &kp X &kp UNDER &kp C &kp O &kp L &kp EQUAL &kp AT &kp C &kp O &kp L &kp UNDER &kp N &kp A &kp M &kp E &kp AT &kp COMMA &kp D &kp T &kp Y &kp P &kp E &kp EQUAL &kp LBRC &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp UNDER &kp N &kp A &kp M &kp E &kp SQT &kp COLON &kp SPACE &kp SQT &kp T &kp Y &kp P &kp E &kp SQT &kp RBRC &kp COMMA &kp SPACE &kp P &kp A &kp R &kp S &kp E &kp UNDER &kp D &kp A &kp T &kp E &kp EQUAL &kp LBKT &kp AT &kp D &kp A &kp T &kp E &kp UNDER &kp C &kp O &kp L &kp AT &kp RBKT &kp COMMA &kp SPACE &kp N &kp R &kp O &kp W &kp S &kp EQUAL &kp N1 &kp N0 &kp N0 &kp COMMA &kp SPACE &kp N &kp A &kp UNDER &kp V &kp A &kp L &kp U &kp E &kp S &kp EQUAL &kp LBKT &kp AT &kp QMARK &kp AT &kp RBKT &kp COMMA &kp SPACE &kp T &kp R &kp U &kp E &kp UNDER &kp V &kp A &kp L &kp U &kp E &kp S &kp EQUAL &kp LBKT &kp AT &kp Y &kp E &kp S &kp AT &kp RBKT &kp COMMA &kp SPACE &kp F &kp A &kp L &kp S &kp E &kp UNDER &kp V &kp A &kp L &kp U &kp E &kp S &kp EQUAL &kp LBKT &kp AT &kp N &kp O &kp AT &kp RBKT &kp RPAR &kp ENTER>;
@@ -128,6 +128,15 @@
         };
     };
 
+    behaviors {
+        tap_read_csv: tap_read_csv {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_READ_CSV";
+            #binding-cells = <0>;
+            bindings = <&tap_read_csv>, <&read_csv_extended>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -187,10 +196,10 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans      &trans  &read_csv  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &splitData  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &tap_read_csv  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &splitData  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans         &trans  &trans  &trans  &trans
             >;
         };
     };
