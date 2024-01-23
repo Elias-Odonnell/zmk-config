@@ -161,7 +161,7 @@
 
             bindings = <
 &kp GRAVE  &kp AT_SIGN        &trans          &kp EQUAL         &kp PRCNT             &trans                &kp AMPS         &kp UNDERSCORE         &trans             &kp PIPE2        &kp ASTERISK  &trans
-&trans     &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans                &kp NON_US_HASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans        &kp LEFT_ALT
+&trans     &kp DOUBLE_QUOTES  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans                &kp NON_US_HASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans        &trans
 &trans     &trans             &trans          &trans            &trans                &kp NON_US_BACKSLASH  &kp EXCLAMATION  &trans                 &kp MINUS          &kp PLUS         &trans        &trans
                                               &mo 3             &trans                &trans                &trans           &trans                 &mo 3
             >;
