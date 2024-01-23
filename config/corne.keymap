@@ -48,8 +48,10 @@
         read_csv: read_csv {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp p &kp d &kp DOT &kp r &kp e &kp a &kp d &kp UNDER &kp c &kp s &kp v &kp LPAR &kp DQT &kp DQT &kp COMMA &kp SPACE &kp u &kp s &kp e &kp c &kp o &kp l &kp s &kp EQUAL &kp LBKT &kp DQT &kp c &kp o &kp l &kp n &kp a &kp m &kp e &kp DQT &kp COMMA &kp DQT &kp c &kp o &kp l &kp N2 &kp n &kp a &kp m &kp e &kp DQT &kp RBKT &kp COMMA &kp i &kp n &kp d &kp e &kp x &kp UNDER &kp c &kp o &kp l &kp EQUAL &kp DQT &kp c &kp o &kp l &kp UNDER &kp n &kp a &kp m &kp e &kp DQT &kp COMMA &kp d &kp t &kp y &kp p &kp e &kp EQUAL &kp LBRC &kp SQT &kp c &kp o &kp l &kp u &kp m &kp n &kp UNDER &kp n &kp a &kp m &kp e &kp SQT &kp COLON &kp SPACE &kp SQT &kp t &kp y &kp p &kp e &kp SQT &kp RBRC &kp COMMA &kp SPACE &kp p &kp a &kp r &kp s &kp e &kp UNDER &kp d &kp a &kp t &kp e &kp EQUAL &kp LBKT &kp DQT &kp d &kp a &kp t &kp e &kp UNDER &kp c &kp o &kp l &kp DQT &kp RBKT &kp COMMA &kp SPACE &kp n &kp r &kp o &kp w &kp s &kp EQUAL &kp N1 &kp N0 &kp N0 &kp COMMA &kp SPACE &kp n &kp a &kp UNDER &kp v &kp a &kp l &kp u &kp e &kp s &kp EQUAL &kp LBKT &kp DQT &kp QMARK &kp DQT &kp RBKT &kp COMMA &kp SPACE &kp t &kp r &kp u &kp e &kp UNDER &kp v &kp a &kp l &kp u &kp e &kp s &kp EQUAL &kp LBKT &kp DQT &kp y &kp e &kp s &kp DQT &kp RBKT &kp COMMA &kp SPACE &kp f &kp a &kp l &kp s &kp e &kp UNDER &kp v &kp a &kp l &kp u &kp e &kp s &kp EQUAL &kp LBKT &kp DQT &kp n &kp o &kp DQT &kp RBKT &kp RPAR &kp ENTER>;
             label = "READ_CSV";
+            wait-ms = <30>;
+            tap-ms = <40>;
         };
     };
 
