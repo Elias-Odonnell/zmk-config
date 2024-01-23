@@ -48,7 +48,7 @@
         read_csv: read_csv {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp D &kp DOT &kp R &kp E &kp A &kp D &kp UNDER &kp C &kp S &kp V &kp LPAR &kp AT &kp AT &kp COMMA &kp SPACE &kp S &kp E &kp P &kp EQUAL &kp AT &kp COMMA &kp AT &kp COMMA &kp RPAR &kp ENTER> >;
+            bindings = <&kp P &kp D &kp DOT &kp R &kp E &kp A &kp D &kp UNDER &kp C &kp S &kp V &kp LPAR &kp AT &kp AT &kp COMMA &kp SPACE &kp S &kp E &kp P &kp EQUAL &kp AT &kp COMMA &kp AT &kp RPAR &kp ENTER> >;
             label = "READ_CSV";
             wait-ms = <30>;
             tap-ms = <40>;
