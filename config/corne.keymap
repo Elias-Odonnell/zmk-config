@@ -62,6 +62,13 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+        read_csv_multiple: read_csv_multiple {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE &kp G &kp L &kp O &kp B &kp ENTER &kp I &kp M &kp P &kp O &kp R &kp T &kp SPACE &kp O &kp S &kp ENTER &kp ENTER &kp F &kp I &kp L &kp E &kp S &kp SPACE &kp EQUAL &kp SPACE &kp G &kp L &kp O &kp B &kp DOT &kp G &kp L &kp O &kp B &kp LPAR &kp AT &kp F &kp I &kp L &kp E &kp UNDER &kp ASTRK &kp DOT &kp C &kp S &kp V &kp AT &kp RPAR &kp ENTER &kp ENTER &kp R &kp E &kp S &kp U &kp L &kp T &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp C &kp O &kp N &kp C &kp A &kp T &kp LPAR &kp LBKT &kp P &kp D &kp DOT &kp R &kp E &kp A &kp D &kp UNDER &kp C &kp S &kp V &kp LPAR &kp F &kp RPAR &kp SPACE &kp F &kp O &kp R &kp SPACE &kp F &kp SPACE &kp I &kp N &kp SPACE &kp F &kp I &kp L &kp E &kp S &kp RBKT &kp COMMA &kp SPACE &kp I &kp G &kp N &kp O &kp R &kp E &kp UNDER &kp I &kp N &kp D &kp E &kp X &kp EQUAL &kp LS(T) &kp R &kp U &kp E &kp RPAR &kp ENTER >;            label = "READ_CSV_MULTIPLE";
+            wait-ms = <30>;
+            tap-ms = <40>;
+        };
     };
 
     combos {
