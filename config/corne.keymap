@@ -80,10 +80,11 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
         pandas_if_then_else: pandas_if_then_else {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp D &kp F &kp LBKT &kp AT &kp O &kp U &kp T &kp P &kp U &kp T &kp AT &kp RBKT &kp SPACE &kp EQUAL &kp SPACE &kp N &kp P &kp DOT &kp W &kp H &kp E &kp R &kp E &kp LPAR &kp C &kp O &kp N &kp D &kp I &kp T &kp I &kp O &kp N &kp COMMA &kp SPACE &kp T &kp R &kp U &kp E &kp LS(R) &kp E &kp S &kp U &kp L &kp T &kp COMMA &kp SPACE &kp F &kp A &kp L &kp S &kp E &kp LS(R) &kp E &kp S &kp U &kp L &kp T &kp RPAR &kp ENTER >;           
+            bindings = <&kp D &kp F &kp LBKT &kp AT &kp O &kp U &kp T &kp P &kp U &kp T &kp AT &kp RBKT &kp SPACE &kp EQUAL &kp SPACE &kp N &kp P &kp DOT &kp W &kp H &kp E &kp R &kp E &kp LPAR &kp C &kp O &kp N &kp D &kp I &kp T &kp I &kp O &kp N &kp COMMA &kp SPACE &kp T &kp R &kp U &kp E &kp LS(R) &kp E &kp S &kp U &kp L &kp T &kp COMMA &kp SPACE &kp F &kp A &kp L &kp S &kp E &kp LS(R) &kp E &kp S &kp U &kp L &kp T &kp RPAR &kp ENTER>;
             label = "PANDAS_IF_THEN_ELSE";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -167,12 +168,12 @@
 
             tapping-term-ms = <300>;
         };
+
         tap_pandas_if_then_else: tap_pandas_if_then_else {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_PANDAS_IF_THEN_ELSE";
             #binding-cells = <0>;
-            bindings =
-                <&pandas_if_then_else>;
+            bindings = <&pandas_if_then_else>;
             tapping-term-ms = <300>;
         };
     };
@@ -236,9 +237,9 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans      &trans  &tap_read_csv  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &splitData  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans      &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &tap_read_csv  &trans  &trans  &trans  &pandas_if_then_else  &trans  &trans  &trans
+&trans  &trans  &splitData  &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans  &trans
                             &trans  &trans         &trans  &trans  &trans  &trans
             >;
         };
