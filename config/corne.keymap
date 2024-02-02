@@ -93,7 +93,7 @@
         pandas_pivot_table: pandas_pivot_table {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp T &kp A &kp B &kp L &kp E &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp P &kp I &kp V &kp O &kp T &kp UNDER &kp T &kp A &kp B &kp L &kp E &kp LPAR &kp D &kp F &kp COMMA &kp I &kp N &kp D &kp E &kp X &kp EQUAL &kp LBKT &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N1 &kp SQT &kp COMMA &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N2 &kp SQT &kp RBKT &kp COMMA &kp SPACE &kp C &kp O &kp L &kp U &kp M &kp N &kp S &kp EQUAL &kp LBKT &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp AT &kp COMMA &kp SPACE &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp AT &kp RBKT &kp COMMA &kp SPACE &kp A &kp G &kp G &kp F &kp U &kp N &kp C &kp EQUAL &kp LBRC &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp M &kp E &kp A &kp N &kp COMMA &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp S &kp U &kp M &kp RBRC &kp RPAR >;
+            bindings = <&kp T &kp A &kp B &kp L &kp E &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp P &kp I &kp V &kp O &kp T &kp UNDER &kp T &kp A &kp B &kp L &kp E &kp LPAR &kp D &kp F &kp COMMA &kp I &kp N &kp D &kp E &kp X &kp EQUAL &kp LBKT &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N1 &kp SQT &kp COMMA &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N2 &kp SQT &kp RBKT &kp COMMA &kp SPACE &kp C &kp O &kp L &kp U &kp M &kp N &kp S &kp EQUAL &kp LBKT &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp AT &kp COMMA &kp SPACE &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp AT &kp RBKT &kp COMMA &kp SPACE &kp A &kp G &kp G &kp F &kp U &kp N &kp C &kp EQUAL &kp LBRC &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp M &kp E &kp A &kp N &kp COMMA &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp S &kp U &kp M &kp RBRC &kp RPAR>;
             label = "PANDAS_PIVOT_TABLE";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -174,6 +174,7 @@
                 <&read_csv_clipboard>,
                 <&read_csv_multiple>,
                 <&read_csv_extended>;
+
             tapping-term-ms = <300>;
         };
     };
@@ -237,9 +238,9 @@
 
         macros {
             bindings = <
-&trans  &trans  &trans      &trans  &tap_read_csv  &trans  &trans  &trans  &pandas_if_then_else  &trans  &trans  &trans
-&trans  &trans  &splitData  &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans  &trans
-&trans  &trans  &trans      &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans  &trans
+&trans  &trans  &trans      &trans  &tap_read_csv  &trans  &trans  &trans  &pandas_if_then_else  &trans  &pandas_pivot_table  &trans
+&trans  &trans  &splitData  &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans               &trans
+&trans  &trans  &trans      &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans               &trans
                             &trans  &trans         &trans  &trans  &trans  &trans
             >;
         };
