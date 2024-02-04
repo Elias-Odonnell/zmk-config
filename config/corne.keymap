@@ -181,7 +181,7 @@
         e_excel: e_excel {
             compatible = "zmk,behavior-hold-tap";
             label = "E_EXCEL";
-            bindings = <&lt>, <&kp>;
+            bindings = <&sl>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
