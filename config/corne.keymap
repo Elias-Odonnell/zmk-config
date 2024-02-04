@@ -93,7 +93,7 @@
         pandas_pivot_table: pandas_pivot_table {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp T &kp A &kp B &kp L &kp E &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp P &kp I &kp V &kp O &kp T &kp UNDER &kp T &kp A &kp B &kp L &kp E &kp LPAR &kp D &kp F &kp COMMA &kp I &kp N &kp D &kp E &kp X &kp EQUAL &kp LBKT &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N1 &kp SQT &kp COMMA &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N2 &kp SQT &kp RBKT &kp COMMA &kp SPACE &kp V &kp A &kp L &kp U &kp E &kp S &kp EQUAL &kp LBKT &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp AT &kp COMMA &kp SPACE &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp AT &kp RBKT &kp COMMA &kp SPACE &kp A &kp G &kp G &kp F &kp U &kp N &kp C &kp EQUAL &kp LBRC &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp M &kp E &kp A &kp N &kp COMMA &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp S &kp U &kp M &kp RBRC &kp RPAR >;
+            bindings = <&kp T &kp A &kp B &kp L &kp E &kp SPACE &kp EQUAL &kp SPACE &kp P &kp D &kp DOT &kp P &kp I &kp V &kp O &kp T &kp UNDER &kp T &kp A &kp B &kp L &kp E &kp LPAR &kp D &kp F &kp COMMA &kp I &kp N &kp D &kp E &kp X &kp EQUAL &kp LBKT &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N1 &kp SQT &kp COMMA &kp SQT &kp I &kp N &kp D &kp E &kp X &kp N2 &kp SQT &kp RBKT &kp COMMA &kp SPACE &kp V &kp A &kp L &kp U &kp E &kp S &kp EQUAL &kp LBKT &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp AT &kp COMMA &kp SPACE &kp AT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp AT &kp RBKT &kp COMMA &kp SPACE &kp A &kp G &kp G &kp F &kp U &kp N &kp C &kp EQUAL &kp LBRC &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N1 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp M &kp E &kp A &kp N &kp COMMA &kp SQT &kp C &kp O &kp L &kp U &kp M &kp N &kp N2 &kp SQT &kp COLON &kp N &kp P &kp DOT &kp S &kp U &kp M &kp RBRC &kp RPAR>;
             label = "PANDAS_PIVOT_TABLE";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -177,6 +177,16 @@
 
             tapping-term-ms = <300>;
         };
+
+        e_excel: e_excel {
+            compatible = "zmk,behavior-hold-tap";
+            label = "E_EXCEL";
+            bindings = <&lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -190,10 +200,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC     &kp Q  &kp W  &kp E  &kp R      &kp T  &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB     &kp A  &kp S  &kp D  &kp F      &kp G  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&caps_word  &kp Z  &kp X  &kp C  &kp V      &kp B  &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &caps_word
-                          &mo 1  &kp ENTER  &mo 2  &mo 2  &kp SPACE  &mo 1
+&kp ESC     &kp Q  &kp W  &e_excel 5 E  &kp R      &kp T  &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB     &kp A  &kp S  &kp D         &kp F      &kp G  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&caps_word  &kp Z  &kp X  &kp C         &kp V      &kp B  &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &caps_word
+                          &mo 1         &kp ENTER  &mo 2  &mo 2  &kp SPACE  &mo 1
             >;
         };
 
@@ -242,6 +252,15 @@
 &trans  &trans  &splitData  &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans               &trans
 &trans  &trans  &trans      &trans  &trans         &trans  &trans  &trans  &trans                &trans  &trans               &trans
                             &trans  &trans         &trans  &trans  &trans  &trans
+            >;
+        };
+
+        excel {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp B   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
