@@ -134,6 +134,39 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+        excel_trim: excel_trim {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp LS(T) &kp LS(R) &kp LS(I) &kp LS(M) &kp LPAR &kp T &kp E &kp X &kp T &kp RPAR >;
+            label = "EXCEL_TRIM";
+            wait-ms = <30>;
+            tap-ms = <40>;
+        };
+        excel_max: excel_max {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp LS(T) &kp LS(R) &kp LS(I) &kp LS(M) &kp LPAR &kp T &kp E &kp X &kp T &kp RPAR >;
+            label = "EXCEL_MAX";
+            wait-ms = <30>;
+            tap-ms = <40>;
+        };
+        excel_min: excel_min {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            &kp EQUAL &kp LS(M) &kp LS(I) &kp LS(N) &kp LPAR &kp RPAR >;
+            label = "EXCEL_MIN"
+            wait-ms = <30>;
+            tap-ms = <40>;
+        };
+        excel_average: excel_average {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            &kp EQUAL &kp LS(A) &kp LS(V) &kp LS(E) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(E) &kp LPAR &kp RPAR >;
+            label = "EXCEL_AVERAGE"
+            wait-ms = <30>;
+            tap-ms = <40>;
+        };
+
     };
 
     combos {
@@ -223,6 +256,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        tap_excel_max_min: tap_excel_max_min {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_EXCEL_MAX_MIN";
+            #binding-cells = <0>;
+            bindings =
+                <&excel_max>,
+                <&excel_min>,
+            tapping-term-ms = <300>;
+        };
     };
 
     keymap {
@@ -293,10 +336,10 @@
 
         excel {
             bindings = <
-&trans  &trans  &trans         &trans           &trans          &trans  &trans  &trans  &excel_ifs  &trans  &trans  &trans
-&trans  &trans  &excel_sumifs  &trans           &trans          &trans  &trans  &trans  &trans      &trans  &trans  &trans
-&trans  &trans  &trans         &excel_countifs  &excel_vlookup  &trans  &trans  &trans  &trans      &trans  &trans  &trans
-                               &trans           &trans          &trans  &trans  &trans  &trans
+&trans  &trans          &trans         &trans           &trans          &excel_trim   &trans  &trans              &excel_ifs  &trans  &trans  &trans
+&trans  &excel_average  &excel_sumifs  &trans           &trans          &trans        &trans  &trans              &trans      &trans  &trans  &trans
+&trans  &trans          &trans         &excel_countifs  &excel_vlookup  &trans        &trans  &tap_excel_max_min  &trans      &trans  &trans  &trans
+                               &trans           &trans          &trans        &trans  &trans              &trans
             >;
         };
     };
