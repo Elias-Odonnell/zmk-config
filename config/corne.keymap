@@ -107,33 +107,30 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
         excel_sumifs: excel_sumifs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(S) &kp LS(U) &kp LS(M) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp COMMA &kp AT &kp LT &kp GT &kp AT &kp & &kp AT &kp AT &kp RPAR>;
-            label = "EXCEL_SUMIFS";
+            bindings = <&kp EQUAL &kp LS(S) &kp LS(U) &kp LS(M) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp RPAR>;
+            label = "EXCEL_SUMIF";
             wait-ms = <30>;
             tap-ms = <40>;
-        };
-
 
         excel_countifs: excel_countifs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(C) &kp LS(O) &kp LS(U) &kp LS(N) &kp LS(T) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp COMMA &kp AT &kp LT &kp GT &kp AT &kp & &kp AT &kp AT &kp RPAR>;
-            label = "EXCEL_COUNTIFS";
+            bindings = <&kp EQUAL &kp LS(C) &kp LS(O) &kp LS(U) &kp LS(N) &kp LS(T) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp RPAR>;
+            label = "EXCEL_COUNTIF";
             wait-ms = <30>;
             tap-ms = <40>;
-        };
 
         excel_vlookup: excel_vlookup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(V) &kp LS(L) &kp LS(O) &kp LS(O) &kp LS(K) &kp LS(U) &kp LS(P) &kp LPAR &kp V &kp A &kp L &kp U &kp E &kp COMMA &kp SPACE &kp R &kp A &kp N &kp G &kp E &kp COMMA &kp SPACE &kp C &kp O &kp L &kp U &kp M &kp N &kp LS(B) &kp A &kp C &kp K &kp COMMA &kp SPACE &kp LS(F) &kp LS(A) &kp LS(L) &kp LS(S) &kp LS(E) &kp RPAR>;
+            bindings = <&kp EQUAL &kp LS(V) &kp LS(L) &kp LS(O) &kp LS(O) &kp LS(K) &kp LS(U) &kp LS(P) &kp LPAR &kp V &kp A &kp L &kp U &kp E &kp COMMA &kp SPACE &kp T &kp A &kp B &kp L &kp E &kp LS(R) &kp A &kp N &kp G &kp E &kp LBKT &kp DOLLAR &kp LS(A) &kp N1 &kp COLON &kp DOLLAR &kp C &kp N1 &kp N0 &kp RBKT &kp COMMA &kp SPACE &kp C &kp O &kp L &kp U &kp M &kp N &kp LS(T) &kp O &kp LS(R) &kp E &kp T &kp U &kp R &kp N &kp LBKT &kp N2 &kp RBKT &kp COMMA &kp SPACE &kp LS(F) &kp LS(A) &kp LS(L) &kp LS(S) &kp LS(E) &kp RPAR>;
             label = "EXCEL_VLOOKUP";
             wait-ms = <30>;
             tap-ms = <40>;
-        };
 
         excel_trim: excel_trim {
             compatible = "zmk,behavior-macro";
@@ -167,15 +164,6 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp LS(M) &kp LS(A) &kp LS(X) &kp LPAR &kp RPAR>;
             label = "EXCEL_MAX";
-            wait-ms = <30>;
-            tap-ms = <40>;
-        };
-
-        excel_notempty: excel_notempty {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp AT &kp LT &kp GT &kp AT &kp & &kp AT &kp AT &kp ENTER>;
-            label = "EXCEL_NOTEMPTY";
             wait-ms = <30>;
             tap-ms = <40>;
         };
