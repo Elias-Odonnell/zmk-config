@@ -156,7 +156,7 @@
         excel_min: excel_min {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            &kp EQUAL &kp LS(M) &kp LS(I) &kp LS(N) &kp LPAR &kp RPAR >;
+            bindings = &kp EQUAL &kp LS(M) &kp LS(I) &kp LS(N) &kp LPAR &kp RPAR >;
             label = "EXCEL_MIN";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -165,7 +165,7 @@
         excel_average: excel_average {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            &kp EQUAL &kp LS(A) &kp LS(V) &kp LS(E) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(E) &kp LPAR &kp RPAR >;
+            bindings = &kp EQUAL &kp LS(A) &kp LS(V) &kp LS(E) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(E) &kp LPAR &kp RPAR >;
             label = "EXCEL_AVERAGE";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -247,7 +247,6 @@
                 <&read_csv_clipboard>,
                 <&read_csv_multiple>,
                 <&read_csv_extended>;
-
             tapping-term-ms = <300>;
         };
 
@@ -255,7 +254,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "KP_STICKYLAYER";
             bindings = <&sl>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
@@ -343,7 +341,7 @@
 &trans  &trans          &trans         &trans           &trans          &excel_trim   &trans  &trans              &excel_ifs  &trans  &trans  &trans
 &trans  &excel_average  &excel_sumifs  &trans           &trans          &trans        &trans  &trans              &trans      &trans  &trans  &trans
 &trans  &trans          &trans         &excel_countifs  &excel_vlookup  &trans        &trans  &tap_excel_max_min  &trans      &trans  &trans  &trans
-                               &trans           &trans          &trans        &trans  &trans              &trans
+                                       &trans           &trans          &trans        &trans  &trans              &trans
             >;
         };
     };
