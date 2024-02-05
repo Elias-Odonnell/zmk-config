@@ -111,7 +111,7 @@
         excel_sumifs: excel_sumifs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(S) &kp LS(U) &kp LS(M) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp AT &kp LT &kp GT &kp AT &kp AMPERSAND &kp AT &kp AT &kp RPAR>;
+            bindings = <&kp EQUAL &kp LS(S) &kp LS(U) &kp LS(M) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp COMMA &kp AT &kp LT &kp GT &kp AT &kp AMPERSAND &kp AT &kp AT &kp RPAR>;
             label = "EXCEL_SUMIF";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -120,7 +120,7 @@
         excel_countifs: excel_countifs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(C) &kp LS(O) &kp LS(U) &kp LS(N) &kp LS(T) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp AT &kp LT &kp GT &kp AT &kp AMPERSAND &kp AT &kp AT &kp RPAR>;
+            bindings = <&kp EQUAL &kp LS(C) &kp LS(O) &kp LS(U) &kp LS(N) &kp LS(T) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp COMMA &kp AT &kp LT &kp GT &kp AT &kp AMPERSAND &kp AT &kp AT &kp RPAR>;
             label = "EXCEL_COUNTIF";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -347,10 +347,10 @@
 
         excel {
             bindings = <
-&trans  &trans          &trans         &trans           &trans          &excel_trim  &trans  &trans              &excel_ifs  &trans  &trans  &trans
-&trans  &excel_average  &excel_sumifs  &trans           &trans          &trans       &trans  &trans              &trans      &trans  &trans  &trans
-&trans  &trans          &trans         &excel_countifs  &excel_vlookup  &trans       &trans  &tap_excel_max_min  &trans      &trans  &trans  &trans
-                                       &trans           &trans          &trans       &trans  &trans              &trans
+&trans  &trans          &trans         &trans           &trans          &excel_trim  &trans           &trans              &excel_ifs  &trans  &trans  &trans
+&trans  &excel_average  &excel_sumifs  &trans           &trans          &trans       &trans           &trans              &trans      &trans  &trans  &trans
+&trans  &trans          &trans         &excel_countifs  &excel_vlookup  &trans       &excel_notempty  &tap_excel_max_min  &trans      &trans  &trans  &trans
+                                       &trans           &trans          &trans       &trans           &trans              &trans
             >;
         };
     };
