@@ -112,7 +112,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp LS(S) &kp LS(U) &kp LS(M) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp COMMA &kp AT &kp LT &kp GT &kp AT &kp & &kp AT &kp AT &kp RPAR >;
-            label = "EXCEL_SUMIFS;"
+            label = "EXCEL_SUMIFS";
             wait-ms = <30>;
             tap-ms = <40>;
         };
@@ -121,7 +121,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp LS(C) &kp LS(O) &kp LS(U) &kp LS(N) &kp LS(T) &kp LS(I) &kp LS(F) &kp LS(S) &kp LPAR &kp COMMA &kp AT &kp LT &kp GT &kp AT &kp & &kp AT &kp AT &kp RPAR >;
-            label = "EXCEL_COUNTIFS;"
+            label = "EXCEL_COUNTIFS";
             wait-ms = <30>;
             tap-ms = <40>;
         };
@@ -130,7 +130,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp LS(V) &kp LS(L) &kp LS(O) &kp LS(O) &kp LS(K) &kp LS(U) &kp LS(P) &kp LPAR &kp V &kp A &kp L &kp U &kp E &kp COMMA &kp SPACE &kp R &kp A &kp N &kp G &kp E &kp COMMA &kp SPACE &kp C &kp O &kp L &kp U &kp M &kp N &kp LS(B) &kp A &kp C &kp K &kp COMMA &kp SPACE &kp LS(F) &kp LS(A) &kp LS(L) &kp LS(S) &kp LS(E) &kp RPAR >;
-            label = "EXCEL_VLOOKUP;"
+            label = "EXCEL_VLOOKUP";
             wait-ms = <30>;
             tap-ms = <40>;
         };
@@ -175,7 +175,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp AT &kp LT &kp GT &kp AT &kp & >;
-            label = "EXCEL_NOTEMPTY;"
+            label = "EXCEL_NOTEMPTY";
             wait-ms = <30>;
             tap-ms = <40>;
         };
