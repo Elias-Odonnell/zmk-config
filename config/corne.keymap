@@ -154,15 +154,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             &kp EQUAL &kp LS(M) &kp LS(I) &kp LS(N) &kp LPAR &kp RPAR >;
-            label = "EXCEL_MIN"
+            label = "EXCEL_MIN";
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
         excel_average: excel_average {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             &kp EQUAL &kp LS(A) &kp LS(V) &kp LS(E) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(E) &kp LPAR &kp RPAR >;
-            label = "EXCEL_AVERAGE"
+            label = "EXCEL_AVERAGE";
             wait-ms = <30>;
             tap-ms = <40>;
         };
