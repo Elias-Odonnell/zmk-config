@@ -107,7 +107,6 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
-
         excel_sumifs: excel_sumifs {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -116,6 +115,7 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
 
         excel_countifs: excel_countifs {
             compatible = "zmk,behavior-macro";
