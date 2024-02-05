@@ -134,6 +134,7 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
         excel_trim: excel_trim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -142,6 +143,7 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
         excel_max: excel_max {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -150,6 +152,7 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+
         excel_min: excel_min {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -264,7 +267,7 @@
             #binding-cells = <0>;
             bindings =
                 <&excel_max>,
-                <&excel_min>,
+                <&excel_min>;
             tapping-term-ms = <300>;
         };
     };
