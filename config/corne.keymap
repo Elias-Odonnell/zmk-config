@@ -192,7 +192,7 @@
         excel_right: excel_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp EQUAL &kp LS(R) &kp LS(I) &kp LS(G) &kp LS(H) &kp LS(T) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp LS(L) &kp LS(E) &kp LS(N) &kp LPAR &kp LS(C) &kp N2 &kp RPAR &kp MINUS &kp LS(S) &kp LS(E) &kp LS(A) &kp LS(R) &kp LS(C) &kp LS(H) &kp LPAR &kp AT &kp COMMA &kp AT &kp COMMA &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp N1 &kp RPAR &kp RPAR>;
+            bindings = < &kp EQUAL &kp LS(R) &kp LS(I) &kp LS(G) &kp LS(H) &kp LS(T) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp LS(L) &kp LS(E) &kp LS(N) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp RPAR &kp MINUS &kp LS(S) &kp LS(E) &kp LS(A) &kp LS(R) &kp LS(C) &kp LS(H) &kp LPAR &kp AT &kp COMMA &kp AT &kp COMMA &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp N1 &kp RPAR &kp RPAR >;
             label = "EXCEL_RIGHT";
             wait-ms = <30>;
             tap-ms = <40>;
