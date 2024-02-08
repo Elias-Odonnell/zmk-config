@@ -183,7 +183,7 @@
         excel_left: excel_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp EQUAL &kp LS(L) &kp LS(E) &kp LS(F) &kp LS(T) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp LS(S) &kp LS(E) &kp LS(A) &kp LS(R) &kp LS(C) &kp LS(H) &kp LPAR &kp AT &kp COMMA &kp AT &kp COMMA &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp N1 &kp RPAR &kp RPAR>;
+            bindings = <&kp EQUAL &kp LS(L) &kp LS(E) &kp LS(F) &kp LS(T) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp LS(S) &kp LS(E) &kp LS(A) &kp LS(R) &kp LS(C) &kp LS(H) &kp LPAR &kp AT &kp COMMA &kp AT &kp COMMA &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp N1 &kp RPAR &kp RPAR>;
             label = "EXCEL_LEFT";
             wait-ms = <30>;
             tap-ms = <40>;
@@ -192,18 +192,17 @@
         excel_right: excel_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp EQUAL &kp LS(R) &kp LS(I) &kp LS(G) &kp LS(H) &kp LS(T) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp LS(L) &kp LS(E) &kp LS(N) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp RPAR &kp MINUS &kp LS(S) &kp LS(E) &kp LS(A) &kp LS(R) &kp LS(C) &kp LS(H) &kp LPAR &kp AT &kp COMMA &kp AT &kp COMMA &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp N1 &kp RPAR &kp RPAR >;
+            bindings = <&kp EQUAL &kp LS(R) &kp LS(I) &kp LS(G) &kp LS(H) &kp LS(T) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp LS(L) &kp LS(E) &kp LS(N) &kp LPAR &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp RPAR &kp MINUS &kp LS(S) &kp LS(E) &kp LS(A) &kp LS(R) &kp LS(C) &kp LS(H) &kp LPAR &kp AT &kp COMMA &kp AT &kp COMMA &kp LS(C) &kp LS(E) &kp LS(L) &kp LS(L) &kp COMMA &kp N1 &kp RPAR &kp RPAR>;
             label = "EXCEL_RIGHT";
             wait-ms = <30>;
             tap-ms = <40>;
         };
-        excel_xlookup: excel_xlookup {
+
+        ctrl_e_flash_fill: ctrl_e_flash_fill {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp EQUAL &kp LS(X) &kp LS(L) &kp LS(O) &kp LS(O) &kp LS(K) &kp LS(U) &kp LS(P) &kp LPAR &kp RPAR >;
-            label = "EXCEL_XLOOKUP";
-            wait-ms = <30>;
-            tap-ms = <40>;
+            bindings = <&kp LC(E)>;
+            label = "CTRL_E_FLASH_FILL";
         };
     };
 
@@ -313,6 +312,13 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        tap_f4_flash_fill: tap_f4_flash_fill {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_F4_FLASH_FILL";
+            #binding-cells = <0>;
+            bindings = <&kp F4>, <&ctrl_e_flash_fill>;
+        };
     };
 
     keymap {
@@ -383,10 +389,10 @@
 
         excel {
             bindings = <
-&trans  &trans          &trans         &trans           &excel_right    &excel_trim  &trans           &trans              &excel_ifs  &trans       &trans  &trans
-&trans  &excel_average  &excel_sumifs  &trans           &trans          &trans       &trans           &trans              &trans      &excel_left  &trans  &trans
-&trans  &trans          &excel_xlookup &excel_countifs  &excel_vlookup  &trans       &excel_notempty  &tap_excel_max_min  &trans      &trans       &trans  &trans
-                                       &trans           &trans          &trans       &trans           &trans              &trans
+&trans  &trans          &trans         &trans           &excel_right        &excel_trim  &trans           &trans              &excel_ifs  &trans       &trans  &trans
+&trans  &excel_average  &excel_sumifs  &trans           &tap_f4_flash_fill  &trans       &trans           &trans              &trans      &excel_left  &trans  &trans
+&trans  &trans          &trans         &excel_countifs  &excel_vlookup      &trans       &excel_notempty  &tap_excel_max_min  &trans      &trans       &trans  &trans
+                                       &trans           &trans              &trans       &trans           &trans              &trans
             >;
         };
     };
