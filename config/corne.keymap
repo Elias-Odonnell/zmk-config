@@ -197,6 +197,14 @@
             wait-ms = <30>;
             tap-ms = <40>;
         };
+        excel_xlookup: excel_xlookup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp EQUAL &kp LS(X) &kp LS(L) &kp LS(O) &kp LS(O) &kp LS(K) &kp LS(U) &kp LS(P) &kp LPAR &kp RPAR >;
+            label = "EXCEL_XLOOKUP";
+            wait-ms = <30>;
+            tap-ms = <40>;
+        };
     };
 
     combos {
@@ -377,7 +385,7 @@
             bindings = <
 &trans  &trans          &trans         &trans           &excel_right    &excel_trim  &trans           &trans              &excel_ifs  &trans       &trans  &trans
 &trans  &excel_average  &excel_sumifs  &trans           &trans          &trans       &trans           &trans              &trans      &excel_left  &trans  &trans
-&trans  &trans          &trans         &excel_countifs  &excel_vlookup  &trans       &excel_notempty  &tap_excel_max_min  &trans      &trans       &trans  &trans
+&trans  &trans          &excel_xlookup &excel_countifs  &excel_vlookup  &trans       &excel_notempty  &tap_excel_max_min  &trans      &trans       &trans  &trans
                                        &trans           &trans          &trans       &trans           &trans              &trans
             >;
         };
