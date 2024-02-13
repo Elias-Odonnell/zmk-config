@@ -411,7 +411,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp F21  &kp F22  &kp F23  &kp F24  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans  &trans
-                        &trans  &trans  &trans  &trans   &trans   &trans
+                        &trans  &trans  &trans  &trans   &kp F20  &trans
             >;
         };
     };
